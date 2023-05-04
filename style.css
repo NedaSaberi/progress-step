@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 30%;
+    margin: 200px auto;
+}
+.container .steps{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+.container .step{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #c2bfbf;
+    position: relative;
+    text-align: center;
+    line-height: 1.9;
+    color: #8d8b8b;
+}
+.container .step.active{
+    border-color: rgb(55, 136, 212) ;
+}
+.container .two::before, .container .three::before, .container .four::before{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color:#8d8b8b;
+    position: absolute;
+    top: 17px;
+    left: -69px; 
+    transition: all 1s linear; 
+}
+.container .two.active::before, .container .three.active::before, .container .four.active::before{
+    content: '';
+    width: 67px;
+    background-color:rgb(55, 136, 212); 
+}
+.container .buttons{
+    display: flex;
+    justify-content: center;
+}
+.container .buttons button{
+    margin: 0 10px;
+    background-color: rgb(55, 136, 212);
+    color: #fff;
+    border-radius: 3px;
+    padding: 3px 10px;
+    border: none;
+    cursor: pointer;
+}
+.container .buttons .disable{
+    background-color: #afadad;
+    cursor:not-allowed;
+}
